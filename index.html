@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>For You ❤️</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #fff, #ffe6f0);
+    text-align: center;
+}
+
+h1 {
+    color: #d63384;
+    margin-top: 30px;
+}
+
+.apology {
+    max-width: 500px;
+    margin: 20px auto;
+    font-size: 18px;
+    color: #444;
+    line-height: 1.6;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.lily {
+    font-size: 40px;
+    margin: 10px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.lily:hover {
+    transform: scale(1.3);
+}
+
+.message-box {
+    margin-top: 20px;
+    font-size: 20px;
+    color: #333;
+    min-height: 60px;
+    padding: 10px;
+}
+
+button {
+    background: #ff4d88;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 20px;
+    margin-top: 20px;
+    font-size: 16px;
+}
+</style>
+</head>
+
+<body>
+
+<h1>🌸 I’m Sorry 🌸</h1>
+
+<div class="apology">
+I know I hurt you, and I truly regret it.<br><br>
+You mean so much to me, and I hate that my actions made you feel otherwise.<br><br>
+I’m trying to be better not just in words, but in what I do.<br><br>
+Please take your time… I just hope you can feel how sincere this is.<br><br>
+I love you, princess.
+</div>
+
+<h2>Click each lily 🌸</h2>
+
+<div class="container" id="lilies"></div>
+
+<div class="message-box" id="message"></div>
+
+<button onclick="finalMessage()">One last thing ❤️</button>
+
+<script>
+const messages = [
+"I’m sorry for hurting you.",
+"I should have listened better.",
+"You deserve more care than I showed.",
+"I regret that moment every day.",
+"I miss your smile.",
+"I hate that I caused you pain.",
+"I want to fix things between us.",
+"I care about you deeply.",
+"I should’ve been more patient.",
+"I’m learning from my mistakes.",
+"You mean everything to me.",
+"I miss us.",
+"I wish I could take it back.",
+"I’m trying to grow.",
+"I’ll do better.",
+"You deserve honesty and love.",
+"I appreciate you more than I show.",
+"I’m sorry for my actions.",
+"I never wanted to hurt you.",
+"I hope you can forgive me someday."
+];
+
+const container = document.getElementById("lilies");
+const messageBox = document.getElementById("message");
+
+messages.forEach((msg) => {
+    const lily = document.createElement("div");
+    lily.className = "lily";
+    lily.innerHTML = "🌸";
+
+    lily.onclick = () => {
+        messageBox.innerText = msg;
+    };
+
+    container.appendChild(lily);
+});
+
+function finalMessage() {
+    messageBox.innerHTML = "No matter what happens, I truly care about you. ❤️";
+}
+</script>
+
+</body>
+</html>
